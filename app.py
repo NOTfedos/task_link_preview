@@ -62,4 +62,5 @@ async def parse_url_preview(url_obj: LinkUrl):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=80, debug=True)
+    # uvicorn.run(app, host="0.0.0.0", port=80, debug=True, workers=10, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=80, reload=True, debug=True, workers=10)
